@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: techvishalazureks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: techvishalazureks
+  template:
+    metadata:
+      labels:
+        app: techvishalazureks 
+    spec:
+      containers:
+        - name: techvishalazureks 
+          image: vishacr123.azurecr.io/techvishalazureks
+          ports:
+          - containerPort: 80
