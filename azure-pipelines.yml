@@ -18,7 +18,8 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool: pool-demo-agent
+    pool: 
+      vmImage: ubuntu-latest
     steps:
     - task: Docker@2
       displayName: Build an image
@@ -26,8 +27,7 @@ stages:
         containerRegistry: 'ACR'
         repository: '$(imagerepo)'
         command: 'buildAndPush'
-        Dockerfile: '$(BuildSourcesDirectory)/app/Dockerfile'
+        Dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: |
          $(tag)
          latest
-
