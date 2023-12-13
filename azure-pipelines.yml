@@ -17,6 +17,7 @@ variables:
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
+  Pool: pool-demo-agent
   vmImageName: 'ubuntu-latest'
 
 stages:
