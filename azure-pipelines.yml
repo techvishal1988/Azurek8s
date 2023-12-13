@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'vishacr1231745f36b-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  pool: pool-demo-agent
 
 
 stages:
@@ -51,8 +51,7 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
+    pool: pool-demo-agent
     environment: 'techvishal1988Azurek8s.dev'
     strategy:
       runOnce:
