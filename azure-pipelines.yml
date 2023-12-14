@@ -23,8 +23,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'demoacr'
-        repository: 'demooacr'
+        containerRegistry: 'demo123acr'
+        repository: 'demo123acr'
         command: 'push'
         tags: |
           $(tag)
