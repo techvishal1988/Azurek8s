@@ -24,7 +24,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'acrtestk8'
+        containerRegistry: 'k8s'
         repository: '$(imageRepo)'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourceDirectory)/app/Dockerfile'
